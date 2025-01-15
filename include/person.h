@@ -30,6 +30,9 @@ public:
 
     Person(int starting_id, std::string start_fname, std::string start_lname);
 
+    // Destructor (called when an instance is about to be destroyed)
+    ~Person();
+
     // GETTER methods
     int get_id();
     std::string get_first_name();

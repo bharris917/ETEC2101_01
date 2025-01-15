@@ -42,5 +42,20 @@ int main()
     Person p(42, "Bob", "Jones");
     Person q(43, "Sally", "Smith");
 
+    p.set_hourly_rate(15.0f);
+    p.set_hours_worked(38);
+    q.set_hourly_rate(16.75f);
+    q.set_hours_worked(42);
+
+    Person* pptr = new Person(44, "Eric", "Davis");
+
+    pptr->set_hourly_rate(12.15f);
+    pptr->set_hours_worked(23);
+    (*pptr).set_hourly_rate(12.35f);
+
+    delete pptr;
+
+    std::cout << p.get_id() << " " << p.get_first_name() << "\n";
+
 
 }
