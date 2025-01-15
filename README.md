@@ -1,1 +1,1 @@
-# ETEC2101_01
+This is the repository for our ETEC2101 work spring 2025.
