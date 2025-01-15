@@ -39,11 +39,8 @@ int main()
         std::cout << cpp_string << " comes after \"moo\"\n";
     c_string2 = cpp_string.c_str();     // Getting the underlying C string...so we can use all our
     //   c functions.
-    Person p;
-    //p.id = 42;                        // (broken for a bit)
-    //p.first_name = "Bob";
-    p.calculate_pay();
-    Person q;
-    //q.id = 43;
-    //q.first_name = "Sally";
+    Person p(42, "Bob", "Jones");
+    Person q(43, "Sally", "Smith");
+
+
 }

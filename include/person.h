@@ -25,9 +25,25 @@ private:
     unsigned int hours_worked;
 
 public:
+    //Constructor
+    Person();
+
+    Person(int starting_id, std::string start_fname, std::string start_lname);
+
+    // GETTER methods
+    int get_id();
+    std::string get_first_name();
+    std::string get_last_name();
+    float get_hourly_rate();
+    unsigned int get_hours_worked();
+
+    //SETTER methods
+    void set_hourly_rate(float new_rate);
+    void set_hours_worked(unsigned int new_hours);
+
     // This is a METHOD -- a function that all instances of the class can
     // use.  This is a DECLARATION.  
-    float calculate_pay();
+    float calculate_wage();
 };
 
 #endif
