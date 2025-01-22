@@ -6,6 +6,7 @@ using namespace std;  // Makes the std:: on stuff optional
 int main()
 {
     // C-strings
+    /*
     char s;        // an integer, usually 1 byte.  
     s = 'a';        // 97
     char c_string[64] = "bob";      // 98, 111, 98, 0, ?, ?, ...., ?
@@ -20,13 +21,14 @@ int main()
     printf("test=%d\n", strcmp(c_string, "moo"));
     if (strcmp(c_string, "moo") > 0)
         printf("%s comes after \"moo\"\n", c_string);
-
+    */
 
     // Same, but with C++
-    std::string cpp_string = "bob";     // making an INSTANCE of the string class called cpp_string
+    //std::string cpp_string = "bob";     // making an INSTANCE of the string class called cpp_string
     // std is the NAMESPACE that the string class exists in
-    std::cout << cpp_string << "\n";    // C++ style console output -- a taste of c++ STREAMS (this
+    //std::cout << cpp_string << "\n";    // C++ style console output -- a taste of c++ STREAMS (this
     //   is an output stream which is why  << goes to the left.
+    /*
     int x = 42;
     std::cout << "a string" << x << "\n";
     cpp_string[0] = 'r';                // The [] operator is OVERLOADED for strings
@@ -34,10 +36,11 @@ int main()
     cpp_string[2] = 0;
     std::cout << cpp_string << "\n";
     cpp_string = "robert";              // The class handles the memory copy and making enough space
+    */
     //   to hold this new string (nice!)
-    if (cpp_string > "moo")             // Internally probably calling strcmp
-        std::cout << cpp_string << " comes after \"moo\"\n";
-    c_string2 = cpp_string.c_str();     // Getting the underlying C string...so we can use all our
+    //if (cpp_string > "moo")             // Internally probably calling strcmp
+    //    std::cout << cpp_string << " comes after \"moo\"\n";
+   // c_string2 = cpp_string.c_str();     // Getting the underlying C string...so we can use all our
     //   c functions.
     Person p(42, "Bob", "Jones");
     Person q(43, "Sally", "Smith");
@@ -53,9 +56,28 @@ int main()
     pptr->set_hours_worked(23);
     (*pptr).set_hourly_rate(12.35f);
 
+    delete pptr;        // Like free -- frees up the memory
+                        // pptr points to. The C++ runtime 
+                        // calls the destructor right before
+                        // the memory is freed.
+
+    pptr = NULL;        // NULL is just a macro for 0
+    int y = NULL;       // valid, but "weird"
+    pptr = nullptr;     // A C++ only thing
+    //y = nullptr;        // Error b/c pointers are only ones to use nullptr
+
+    pptr = new Person(45, "Kim", "Young");
+    //Do things with it
     delete pptr;
 
     std::cout << p.get_id() << " " << p.get_first_name() << "\n";
 
-
+    // p and q were allocated on the STACK (an area of memory). STACK is where
+    // "temporary" variables (parameters in functions, p and q here.
+    // HEAP memory is where dynamically allocated memory comes from.
+    // STACK and HEAP memory are shared. If one gets too big, a STACK OVERFLOW
+    
+    // When p and q go out of SCOPE (where you can access the variable)
+    // stack variables go away. the destructor gets called right before this
+    // happens. You shouldn' call this
 }
