@@ -1,11 +1,12 @@
 #include <person.h>		// why "" instead of <>?
 #include <iostream>
+using namespace example;
 
 Person::Person()
 {
 	id = -1;
-	first_name;
-	last_name;
+	first_name = "?";
+	last_name = "?";
 	hourly_rate = 0.0f;
 	hours_worked = 0;
 }
@@ -51,6 +52,10 @@ unsigned int Person::get_hours_worked()
 
 void Person::set_hourly_rate(float new_rate)
 {
+	if (new_rate < 0 || new_rate > 1000)
+	{
+		throw std::runtime_error("Invalid rate of $" + std::to_string(new_rate));
+	}
 	hourly_rate = new_rate;
 }
 
