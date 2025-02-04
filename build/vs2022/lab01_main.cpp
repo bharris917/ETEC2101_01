@@ -1,10 +1,21 @@
 #include <iostream>
 #include <person.h>
-#include <person.database.h>
+#include <person_database.h>
 
 int main(int aargc, char** argv)
 {
-	example::Person wrong_array[100];
+	int x;
+	std::cout << "==================";
+	std::cout << "1. Add Person";
+	std::cout << "2. Remove Person";
+	std::cout << "3. Print";
+	std::cout << "4. Quit";
+	std::cout << "==================";
+	std::cin >> x;
+	if (x == 4)
+	{
+		return 0;
+	}
 
 	// In this construcotr, you'll read in the conents of the 
 	// text file into an array of Person objects. DO NOT use any

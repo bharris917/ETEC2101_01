@@ -4,30 +4,28 @@
 #include <person.h>
 #include <string>
 
-using namespace example;
+namespace example
+{
 
-
-	class Person_Database
+	class PersonDatabase
 	{
 	private:
-		Person* num_people;
-		unsigned int num_people_size;
+		Person* my_array;
+		unsigned int my_array_size;
 		std::string add;
 		std::string remove;
 		std::string print;
 
 	public:
-		Person_Database();
+		PersonDatabase(std::string fname);
 
-		Person_Database(std::string fname);
-
-		~Person_Database();
+		~PersonDatabase();
 
 		unsigned int get_num_people();
-		std::string add_person();
-		std::string remove_person();
+		void add_person(Person p);
+		void remove_person(Person p);
 		std::string to_string();
 	};
 
-
+}
 #endif

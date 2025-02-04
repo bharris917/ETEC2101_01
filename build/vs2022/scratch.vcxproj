@@ -87,8 +87,7 @@
     <ClInclude Include="..\..\include\person.h" />
   </ItemGroup>
   <ItemGroup>
-    <ClCompile Include="..\..\src\examples\oop_basics_examples.cpp" />
-    <ClCompile Include="..\..\src\person.cpp" />
+    <ClCompile Include="template_example.cpp" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">
