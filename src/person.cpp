@@ -4,11 +4,6 @@ using namespace example;
 
 Person::Person()
 {
-	id = -1;
-	first_name = "?";
-	last_name = "?";
-	hourly_rate = 0.0f;
-	hours_worked = 0;
 }
 
 Person::Person(int start_id, std::string start_fname, std::string start_lname)
@@ -20,10 +15,7 @@ Person::Person(int start_id, std::string start_fname, std::string start_lname)
 	hours_worked = 0;
 }
 
-Person::~Person()
-{
-	std::cout << "Person '" << first_name << " " << last_name << "' is about to die!\n";
-}
+Person::~Person(){}
 
 int Person::get_id()
 {

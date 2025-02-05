@@ -25,8 +25,17 @@ namespace example
         /// This is the first name
         /// </summary>
         std::string first_name;
+        /// <summary>
+        /// the last name
+        /// </summary>
         std::string last_name;
+        /// <summary>
+        /// the hourly rate
+        /// </summary>
         float hourly_rate;
+        /// <summary>
+        /// the hours worked
+        /// </summary>
         unsigned int hours_worked;
 
     public:
