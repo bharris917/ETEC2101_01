@@ -5,23 +5,41 @@
 namespace ssuds
 {
 	/// <summary>
-	/// 
+	/// This is our template class
 	/// </summary>
 	/// <typeparam name="T"></typeparam>
 	template <class T>
+	/// <summary>
+	/// The class we use for our array that holds all of our setters and getters.
+	/// </summary>
 	class ArrayList
 	{
 	private:
+		/// <summary>
+		/// my_array being assigned to T
+		/// </summary>
 		T* my_array;
+		/// <summary>
+		/// making the size of the array an integer but leaving it unsigned
+		/// </summary>
 		unsigned int my_array_size;
+		/// <summary>
+		/// making the capacity of the array (how many numbers can be in it) another unsigned int
+		/// </summary>
 		unsigned int my_array_capacity;
 
+		/// <summary>
+		/// grow is what makes the capacity expand when it potentially becomes full, uses the ? operator
+		/// to determine if it needs to grom or if it should stay the same.
+		/// </summary>
 		void grow()
 		{
 			unsigned int new_capacity = (my_array_capacity == 0) ? 1 : my_array_capacity * 2;
 			reserve(new_capacity);
 		}
-
+		/// <summary>
+		/// shrink does the opposite of grow
+		/// </summary>
 		void shrink()
 		{
 			if (my_array_size < my_array_capacity / 4)
@@ -29,15 +47,31 @@ namespace ssuds
 		}
 
 	public:
+		/// <summary>
+		/// The default constructor
+		/// </summary>
 		ArrayList() : my_array(nullptr), my_array_size(0), my_array_capacity(0) {}
-
+		/// <summary>
+		/// The destructor
+		/// </summary>
 		~ArrayList()
 		{
 			delete[] my_array;
 		}
 
-		unsigned int size() const { return my_array_size; }
+		/// <summary>
+		/// this is our size getter method
+		/// </summary>
+		/// <returns></returns>
+		unsigned int size() const 
+		{
+			return my_array_size; 
+		}
 
+		/// <summary>
+		/// The reserve method which will determine the capacity of the list(if called)
+		/// </summary>
+		/// <param name="new_capacity"></param>
 		void reserve(unsigned int new_capacity)
 		{
 			if (new_capacity > my_array_capacity)
@@ -51,6 +85,10 @@ namespace ssuds
 			}
 		}
 
+		/// <summary>
+		/// This method adds a new value to the array list but at the end
+		/// </summary>
+		/// <param name="new_value"></param>
 		void append(const T& new_value)
 		{
 			if (my_array_size == my_array_capacity)
@@ -58,11 +96,22 @@ namespace ssuds
 			my_array[my_array_size++] = new_value;
 		}
 
+		/// <summary>
+		/// This method also adds a new value to the array list except it'll be at the beginning. The 0 is what places
+		/// it at the beginning
+		/// </summary>
+		/// <param name="new_value"></param>
 		void prepend(const T& new_value)
 		{
 			insert(new_value, 0);
 		}
 
+		/// <summary>
+		/// The insert method adds a new value to the list but it can be wherever in the list as long as it's within
+		/// the capacity.
+		/// </summary>
+		/// <param name="new_value"></param>
+		/// <param name="index"></param>
 		void insert(const T& new_value, unsigned int index)
 		{
 			if (index > my_array_size)
@@ -75,6 +124,12 @@ namespace ssuds
 			my_array_size++;
 		}
 
+		/// <summary>
+		/// This method takes an index and returns a reference to the item at that , if it doesn't work
+		/// then it'll error.
+		/// </summary>
+		/// <param name="index"></param>
+		/// <returns></returns>
 		T& at(unsigned int index)
 		{
 			if (index >= my_array_size)
@@ -82,6 +137,12 @@ namespace ssuds
 			return my_array[index];
 		}
 
+		/// <summary>
+		/// This method is the counterpart to insert where you can remove a chosen index from
+		/// anywhere in the list, as long as it is in range, if not it errors.
+		/// </summary>
+		/// <param name="id"></param>
+		/// <returns></returns>
 		T remove(unsigned int id)
 		{
 			if (id >= my_array_size)
@@ -94,6 +155,11 @@ namespace ssuds
 			return removed_value;
 		}
 
+		/// <summary>
+		/// This method will remove all instances of a value instead of an index.
+		/// </summary>
+		/// <param name="value"></param>
+		/// <returns></returns>
 		int remove_all(const T& value)
 		{
 			int count = 0;
@@ -109,6 +175,13 @@ namespace ssuds
 			return count;
 		}
 
+		/// <summary>
+		/// This method finds (hehe) the index of a selected value, which is the search_value and the start_index is
+		/// how many spots from the value in the list.
+		/// </summary>
+		/// <param name="search_value"></param>
+		/// <param name="start_index"></param>
+		/// <returns></returns>
 		int find(const T& search_value, unsigned int start_index = 0) const
 		{
 			for (int i = start_index; i < my_array_size; i++)
@@ -117,6 +190,10 @@ namespace ssuds
 			return -1;
 		}
 
+		/// <summary>
+		/// The output method is what prints out the list and formats it correctly.
+		/// </summary>
+		/// <param name="os"></param>
 		void output(std::ostream& os)
 		{
 			os << "[";
@@ -126,7 +203,7 @@ namespace ssuds
 				if (i < my_array_size - 1)
 					os << ", ";
 			}
-			os << "]";
+			os << "]" << "\n";
 		}
 	};
 }

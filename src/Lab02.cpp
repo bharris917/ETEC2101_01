@@ -35,10 +35,8 @@ int main(int argc, char** argv)
 
 
 	ilist.output(std::cout);			// [40, 41, 42, 43, 44, 40, 43, 99, 43, 98]
-	std::cout << "\n";
 	ilist.remove(1);
 	ilist.output(std::cout);			// [40, 42, 43, 44, 40, 43, 99, 43, 98]
-	std::cout << "\n";
 
 
 	ilist.remove_all(40);
