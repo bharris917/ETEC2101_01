@@ -1,0 +1,236 @@
+\doxysection{ssuds\+::Array\+List\texorpdfstring{$<$}{<} T \texorpdfstring{$>$}{>} Class Template Reference}
+\hypertarget{classssuds_1_1_array_list}{}\label{classssuds_1_1_array_list}\index{ssuds::ArrayList$<$ T $>$@{ssuds::ArrayList$<$ T $>$}}
+
+
+This is our template class.  
+
+
+
+
+{\ttfamily \#include $<$array\+\_\+list.\+h$>$}
+
+\doxysubsubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\Hypertarget{classssuds_1_1_array_list_a17073605b1b8e31ca126e61db633c57d}\label{classssuds_1_1_array_list_a17073605b1b8e31ca126e61db633c57d} 
+{\bfseries Array\+List} ()
+\begin{DoxyCompactList}\small\item\em The default constructor. \end{DoxyCompactList}\item 
+\Hypertarget{classssuds_1_1_array_list_a334e1f8861f34a0da7230aeec7571e3c}\label{classssuds_1_1_array_list_a334e1f8861f34a0da7230aeec7571e3c} 
+{\bfseries \texorpdfstring{$\sim$}{\string~}\+Array\+List} ()
+\begin{DoxyCompactList}\small\item\em The destructor. \end{DoxyCompactList}\item 
+unsigned int \mbox{\hyperlink{classssuds_1_1_array_list_adbcd61184deb92c36610e47b91a7b6d5}{size}} () const
+\begin{DoxyCompactList}\small\item\em this is our size getter method \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classssuds_1_1_array_list_acfcac2fee6d9073352261353fef1f9be}{reserve}} (unsigned int new\+\_\+capacity)
+\begin{DoxyCompactList}\small\item\em The reserve method which will determine the capacity of the list(if called) \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classssuds_1_1_array_list_a6b495a2cf99055ee2bdb96bd84ea5eff}{append}} (const T \&new\+\_\+value)
+\begin{DoxyCompactList}\small\item\em This method adds a new value to the array list but at the end. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classssuds_1_1_array_list_a32995484597929149ddbd279d97fc2f5}{prepend}} (const T \&new\+\_\+value)
+\begin{DoxyCompactList}\small\item\em This method also adds a new value to the array list except it\textquotesingle{}ll be at the beginning. The 0 is what places it at the beginning. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classssuds_1_1_array_list_ab0c125d05af4cdf7d2c90e0976920d3f}{insert}} (const T \&new\+\_\+value, unsigned int index)
+\begin{DoxyCompactList}\small\item\em The insert method adds a new value to the list but it can be wherever in the list as long as it\textquotesingle{}s within the capacity. \end{DoxyCompactList}\item 
+T \& \mbox{\hyperlink{classssuds_1_1_array_list_a6e97a1d7598a6631ef14b55bf918c6a8}{at}} (unsigned int index)
+\begin{DoxyCompactList}\small\item\em This method takes an index and returns a reference to the item at that , if it doesn\textquotesingle{}t work then it\textquotesingle{}ll error. \end{DoxyCompactList}\item 
+T \mbox{\hyperlink{classssuds_1_1_array_list_a7facafa0aebbd9929dea71fb482c5510}{remove}} (unsigned int id)
+\begin{DoxyCompactList}\small\item\em This method is the counterpart to insert where you can remove a chosen index from anywhere in the list, as long as it is in range, if not it errors. \end{DoxyCompactList}\item 
+int \mbox{\hyperlink{classssuds_1_1_array_list_af241acb363cb90960ba39d58709e098f}{remove\+\_\+all}} (const T \&value)
+\begin{DoxyCompactList}\small\item\em This method will remove all instances of a value instead of an index. \end{DoxyCompactList}\item 
+int \mbox{\hyperlink{classssuds_1_1_array_list_ac172925a422549aa34afcf88f4c82d46}{find}} (const T \&search\+\_\+value, unsigned int start\+\_\+index=0) const
+\begin{DoxyCompactList}\small\item\em This method finds (hehe) the index of a selected value, which is the search\+\_\+value and the start\+\_\+index is how many spots from the value in the list. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classssuds_1_1_array_list_addd7f6aaf5c3991f6ab2ff4bd88cb1a4}{output}} (std\+::ostream \&os)
+\begin{DoxyCompactList}\small\item\em The output method is what prints out the list and formats it correctly. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+\subsubsection*{template$<$class T$>$\newline
+class ssuds\+::\+Array\+List$<$ T $>$}
+This is our template class. 
+
+
+\begin{DoxyTemplParams}{Template Parameters}
+{\em T} & \\
+\hline
+\end{DoxyTemplParams}
+
+
+The class we use for our array that holds all of our setters and getters. 
+
+\doxysubsection{Member Function Documentation}
+\Hypertarget{classssuds_1_1_array_list_a6b495a2cf99055ee2bdb96bd84ea5eff}\index{ssuds::ArrayList$<$ T $>$@{ssuds::ArrayList$<$ T $>$}!append@{append}}
+\index{append@{append}!ssuds::ArrayList$<$ T $>$@{ssuds::ArrayList$<$ T $>$}}
+\doxysubsubsection{\texorpdfstring{append()}{append()}}
+{\footnotesize\ttfamily \label{classssuds_1_1_array_list_a6b495a2cf99055ee2bdb96bd84ea5eff} 
+template$<$class T$>$ \\
+void \mbox{\hyperlink{classssuds_1_1_array_list}{ssuds\+::\+Array\+List}}$<$ T $>$\+::append (\begin{DoxyParamCaption}\item[{const T \&}]{new\+\_\+value}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+This method adds a new value to the array list but at the end. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em new\+\_\+value} & \\
+\hline
+\end{DoxyParams}
+\Hypertarget{classssuds_1_1_array_list_a6e97a1d7598a6631ef14b55bf918c6a8}\index{ssuds::ArrayList$<$ T $>$@{ssuds::ArrayList$<$ T $>$}!at@{at}}
+\index{at@{at}!ssuds::ArrayList$<$ T $>$@{ssuds::ArrayList$<$ T $>$}}
+\doxysubsubsection{\texorpdfstring{at()}{at()}}
+{\footnotesize\ttfamily \label{classssuds_1_1_array_list_a6e97a1d7598a6631ef14b55bf918c6a8} 
+template$<$class T$>$ \\
+T \& \mbox{\hyperlink{classssuds_1_1_array_list}{ssuds\+::\+Array\+List}}$<$ T $>$\+::at (\begin{DoxyParamCaption}\item[{unsigned int}]{index}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+This method takes an index and returns a reference to the item at that , if it doesn\textquotesingle{}t work then it\textquotesingle{}ll error. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em index} & \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+
+\end{DoxyReturn}
+\Hypertarget{classssuds_1_1_array_list_ac172925a422549aa34afcf88f4c82d46}\index{ssuds::ArrayList$<$ T $>$@{ssuds::ArrayList$<$ T $>$}!find@{find}}
+\index{find@{find}!ssuds::ArrayList$<$ T $>$@{ssuds::ArrayList$<$ T $>$}}
+\doxysubsubsection{\texorpdfstring{find()}{find()}}
+{\footnotesize\ttfamily \label{classssuds_1_1_array_list_ac172925a422549aa34afcf88f4c82d46} 
+template$<$class T$>$ \\
+int \mbox{\hyperlink{classssuds_1_1_array_list}{ssuds\+::\+Array\+List}}$<$ T $>$\+::find (\begin{DoxyParamCaption}\item[{const T \&}]{search\+\_\+value}{, }\item[{unsigned int}]{start\+\_\+index}{ = {\ttfamily 0}}\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+This method finds (hehe) the index of a selected value, which is the search\+\_\+value and the start\+\_\+index is how many spots from the value in the list. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em search\+\_\+value} & \\
+\hline
+{\em start\+\_\+index} & \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+
+\end{DoxyReturn}
+\Hypertarget{classssuds_1_1_array_list_ab0c125d05af4cdf7d2c90e0976920d3f}\index{ssuds::ArrayList$<$ T $>$@{ssuds::ArrayList$<$ T $>$}!insert@{insert}}
+\index{insert@{insert}!ssuds::ArrayList$<$ T $>$@{ssuds::ArrayList$<$ T $>$}}
+\doxysubsubsection{\texorpdfstring{insert()}{insert()}}
+{\footnotesize\ttfamily \label{classssuds_1_1_array_list_ab0c125d05af4cdf7d2c90e0976920d3f} 
+template$<$class T$>$ \\
+void \mbox{\hyperlink{classssuds_1_1_array_list}{ssuds\+::\+Array\+List}}$<$ T $>$\+::insert (\begin{DoxyParamCaption}\item[{const T \&}]{new\+\_\+value}{, }\item[{unsigned int}]{index}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+The insert method adds a new value to the list but it can be wherever in the list as long as it\textquotesingle{}s within the capacity. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em new\+\_\+value} & \\
+\hline
+{\em index} & \\
+\hline
+\end{DoxyParams}
+\Hypertarget{classssuds_1_1_array_list_addd7f6aaf5c3991f6ab2ff4bd88cb1a4}\index{ssuds::ArrayList$<$ T $>$@{ssuds::ArrayList$<$ T $>$}!output@{output}}
+\index{output@{output}!ssuds::ArrayList$<$ T $>$@{ssuds::ArrayList$<$ T $>$}}
+\doxysubsubsection{\texorpdfstring{output()}{output()}}
+{\footnotesize\ttfamily \label{classssuds_1_1_array_list_addd7f6aaf5c3991f6ab2ff4bd88cb1a4} 
+template$<$class T$>$ \\
+void \mbox{\hyperlink{classssuds_1_1_array_list}{ssuds\+::\+Array\+List}}$<$ T $>$\+::output (\begin{DoxyParamCaption}\item[{std\+::ostream \&}]{os}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+The output method is what prints out the list and formats it correctly. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em os} & \\
+\hline
+\end{DoxyParams}
+\Hypertarget{classssuds_1_1_array_list_a32995484597929149ddbd279d97fc2f5}\index{ssuds::ArrayList$<$ T $>$@{ssuds::ArrayList$<$ T $>$}!prepend@{prepend}}
+\index{prepend@{prepend}!ssuds::ArrayList$<$ T $>$@{ssuds::ArrayList$<$ T $>$}}
+\doxysubsubsection{\texorpdfstring{prepend()}{prepend()}}
+{\footnotesize\ttfamily \label{classssuds_1_1_array_list_a32995484597929149ddbd279d97fc2f5} 
+template$<$class T$>$ \\
+void \mbox{\hyperlink{classssuds_1_1_array_list}{ssuds\+::\+Array\+List}}$<$ T $>$\+::prepend (\begin{DoxyParamCaption}\item[{const T \&}]{new\+\_\+value}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+This method also adds a new value to the array list except it\textquotesingle{}ll be at the beginning. The 0 is what places it at the beginning. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em new\+\_\+value} & \\
+\hline
+\end{DoxyParams}
+\Hypertarget{classssuds_1_1_array_list_a7facafa0aebbd9929dea71fb482c5510}\index{ssuds::ArrayList$<$ T $>$@{ssuds::ArrayList$<$ T $>$}!remove@{remove}}
+\index{remove@{remove}!ssuds::ArrayList$<$ T $>$@{ssuds::ArrayList$<$ T $>$}}
+\doxysubsubsection{\texorpdfstring{remove()}{remove()}}
+{\footnotesize\ttfamily \label{classssuds_1_1_array_list_a7facafa0aebbd9929dea71fb482c5510} 
+template$<$class T$>$ \\
+T \mbox{\hyperlink{classssuds_1_1_array_list}{ssuds\+::\+Array\+List}}$<$ T $>$\+::remove (\begin{DoxyParamCaption}\item[{unsigned int}]{id}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+This method is the counterpart to insert where you can remove a chosen index from anywhere in the list, as long as it is in range, if not it errors. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em id} & \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+
+\end{DoxyReturn}
+\Hypertarget{classssuds_1_1_array_list_af241acb363cb90960ba39d58709e098f}\index{ssuds::ArrayList$<$ T $>$@{ssuds::ArrayList$<$ T $>$}!remove\_all@{remove\_all}}
+\index{remove\_all@{remove\_all}!ssuds::ArrayList$<$ T $>$@{ssuds::ArrayList$<$ T $>$}}
+\doxysubsubsection{\texorpdfstring{remove\_all()}{remove\_all()}}
+{\footnotesize\ttfamily \label{classssuds_1_1_array_list_af241acb363cb90960ba39d58709e098f} 
+template$<$class T$>$ \\
+int \mbox{\hyperlink{classssuds_1_1_array_list}{ssuds\+::\+Array\+List}}$<$ T $>$\+::remove\+\_\+all (\begin{DoxyParamCaption}\item[{const T \&}]{value}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+This method will remove all instances of a value instead of an index. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em value} & \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+
+\end{DoxyReturn}
+\Hypertarget{classssuds_1_1_array_list_acfcac2fee6d9073352261353fef1f9be}\index{ssuds::ArrayList$<$ T $>$@{ssuds::ArrayList$<$ T $>$}!reserve@{reserve}}
+\index{reserve@{reserve}!ssuds::ArrayList$<$ T $>$@{ssuds::ArrayList$<$ T $>$}}
+\doxysubsubsection{\texorpdfstring{reserve()}{reserve()}}
+{\footnotesize\ttfamily \label{classssuds_1_1_array_list_acfcac2fee6d9073352261353fef1f9be} 
+template$<$class T$>$ \\
+void \mbox{\hyperlink{classssuds_1_1_array_list}{ssuds\+::\+Array\+List}}$<$ T $>$\+::reserve (\begin{DoxyParamCaption}\item[{unsigned int}]{new\+\_\+capacity}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+The reserve method which will determine the capacity of the list(if called) 
+
+
+\begin{DoxyParams}{Parameters}
+{\em new\+\_\+capacity} & \\
+\hline
+\end{DoxyParams}
+\Hypertarget{classssuds_1_1_array_list_adbcd61184deb92c36610e47b91a7b6d5}\index{ssuds::ArrayList$<$ T $>$@{ssuds::ArrayList$<$ T $>$}!size@{size}}
+\index{size@{size}!ssuds::ArrayList$<$ T $>$@{ssuds::ArrayList$<$ T $>$}}
+\doxysubsubsection{\texorpdfstring{size()}{size()}}
+{\footnotesize\ttfamily \label{classssuds_1_1_array_list_adbcd61184deb92c36610e47b91a7b6d5} 
+template$<$class T$>$ \\
+unsigned int \mbox{\hyperlink{classssuds_1_1_array_list}{ssuds\+::\+Array\+List}}$<$ T $>$\+::size (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+this is our size getter method 
+
+\begin{DoxyReturn}{Returns}
+
+\end{DoxyReturn}
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+include/array\+\_\+list.\+h\end{DoxyCompactItemize}

@@ -1,4 +1,6 @@
 var searchData=
 [
-  ['set_5fhourly_5frate_0',['set_hourly_rate',['../classexample_1_1_person.html#ad0ad10f90eecc3bf9222c67d0d3296b0',1,'example::Person']]]
+  ['person_0',['Person',['../classexample_1_1_person.html#a13cef9dd175bcc612ae4fca575f91bc5',1,'example::Person::Person()'],['../classexample_1_1_person.html#a85cb13dd10859c1df85d72a4621c318c',1,'example::Person::Person(std::string starting_fname, std::string starting_lname, unsigned int id, float starting_rate)']]],
+  ['persondatabase_1',['PersonDatabase',['../classexample_1_1_person_database.html#a5845e87cbf0ef0dc90192020a9dfd8b9',1,'example::PersonDatabase']]],
+  ['prepend_2',['prepend',['../classssuds_1_1_array_list.html#a32995484597929149ddbd279d97fc2f5',1,'ssuds::ArrayList']]]
 ];
